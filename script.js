@@ -7,6 +7,11 @@ $submitButton.on('click', function(e) {
   e.preventDefault();
   var item = $itemInput.val();
   var quantity = $quantityInput.val();
+  var listItem = createListItem(item, quantity);
 
-  $list.append('<li>Item: ' + item + ' Quantity: ' + quantity + '</li>')
+  $list.append(listItem);
 });
+
+function createListItem(item, quantity) {
+  return '<li>Item: ' + item + ' Quantity: ' + quantity + '</li>'
+}
