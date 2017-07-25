@@ -9,7 +9,13 @@ $submitButton.on('click', function(e) {
   var quantity = $quantityInput.val();
   var listItem = createListItem(item, quantity);
   $list.append(listItem);
+  clearFields();
 });
+
+function clearFields() {
+  $itemInput.val('');
+  $quantityInput.val(''); 
+}
 
 function createListItem(item, quantity) {
   return '<li>Item: ' + item + ' Quantity: ' + quantity + '</li>'
