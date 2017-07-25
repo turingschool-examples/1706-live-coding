@@ -8,7 +8,6 @@ $submitButton.on('click', function(e) {
   var item = $itemInput.val();
   var quantity = $quantityInput.val();
   var listItem = createListItem(item, quantity);
-
   $list.append(listItem);
 });
 
